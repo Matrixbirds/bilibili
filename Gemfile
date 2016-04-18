@@ -13,14 +13,14 @@ gem 'rails', '>= 5.0.0.beta3', '< 5.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # react fontend framework
-gem 'react-rails', '~> 1.6.0'
+# gem 'react-rails', '~> 1.6.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_serializers.git'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'omniauth', '~> 1.3.1'
+gem 'omniauth-oauth2', '~> 1.4.0'
 gem 'omniauth-github', '~> 1.1.2'
 
 gem 'dotenv-rails', :groups => [:development, :test]
@@ -32,10 +32,13 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'factory_girl_rails'
+  gem 'faker'
   gem 'byebug'
 end
 
 group :development do
+  gem 'annotate'
   gem 'listen', '~> 3.0.5'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
