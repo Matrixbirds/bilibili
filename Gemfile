@@ -37,6 +37,10 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :test do
+  gem 'database_cleaner'
+end
+
 group :development do
   gem 'annotate'
   gem 'listen', '~> 3.0.5'

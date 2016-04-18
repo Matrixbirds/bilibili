@@ -22,6 +22,6 @@
 class User < ApplicationRecord
   include UserOmniauth
   has_secure_password
-  enum :gender, [:male, :female, :unknown]
-  enum :provider, [:github]
+  enum gender: [:male, :female, :unknown]
+  enum provider: [:github]
 end

@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'
+  root 'home#index'
   match '/auth/:provider/callback', to: 'sessions#create', via: [:get]
-  match '/sessions/logout', to: 'sessions#destroy', via: [:destroy]
-  match '/sessions/failure', to: 'sessions#failure', via: [:get]
+  resources :sessions, only: [:logout, :failure, :create] do
+    collection do
+      delete :logout, to: 'sessions#destroy'
+      get :failure
+    end
+  end
 end
