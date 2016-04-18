@@ -20,6 +20,10 @@ gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'omniauth', '~> 1.3.1'
+gem 'omniauth-github', '~> 1.1.2'
+
+gem 'dotenv-rails', :groups => [:development, :test]
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

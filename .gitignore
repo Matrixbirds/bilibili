@@ -11,9 +11,10 @@
 /log/*
 /tmp/*
 /config/*.yml
-/vendor/*
+/vendor/bundle
 /bin/*
 /public/robots.txt
+.env
 
 # Ignore Byebug command history file.
 .byebug_history
