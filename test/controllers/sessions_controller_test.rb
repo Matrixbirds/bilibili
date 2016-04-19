@@ -28,7 +28,7 @@ class SessionsControllerTest < ActionController::TestCase
     end
   end
 
-  test 'should login success with exists user' do
+  test 'should login success with exists user from omniauth' do
     request.env['omniauth.auth'] = @omniauth
     @user = create(:user, name: @omniauth["info"]["name"],
                   nickname: Faker::Name.name,
@@ -38,5 +38,15 @@ class SessionsControllerTest < ActionController::TestCase
       get :create
     end
     assert_equal User.last.nickname, @omniauth["info"]["nickname"]
+  end
+
+  test 'should login success with exists user from register' do
+    @user = create(:user, name: @omniauth["info"]["name"],
+                  nickname: Faker::Name.name,
+                  provider: @omniauth["provider"],
+                  uid: @omniauth["uid"],
+                  password: '10241024',
+                  password_confirmation: '10241024')
+    post :create, user: { name: @user.name, password: @user.password }
   end
 end

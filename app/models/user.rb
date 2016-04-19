@@ -15,8 +15,10 @@
 # **`birthday`**         | `datetime`         |
 # **`avatar`**           | `string`           |
 # **`uid`**              | `string`           |
+# **`provider`**         | `integer`          |
 # **`created_at`**       | `datetime`         | `not null`
 # **`updated_at`**       | `datetime`         | `not null`
+# **`email`**            | `string`           |
 #
 
 class User < ApplicationRecord

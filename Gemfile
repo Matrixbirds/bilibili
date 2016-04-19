@@ -26,6 +26,7 @@ gem 'omniauth-github', '~> 1.1.2'
 gem 'dotenv-rails', :groups => [:development, :test]
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'will_paginate', '~> 3.1.0'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails-api/active_model_serializers.git
-  revision: 4c0e2dcb28a1be90fcc5ea3b4562a00d40efa50d
+  revision: 7485c8487ee60a591db500740f88699d4ba7c71c
   specs:
     active_model_serializers (0.10.0.rc5)
       actionpack (>= 4.0)
@@ -167,6 +167,7 @@ GEM
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    will_paginate (3.1.0)
 
 PLATFORMS
   ruby
@@ -189,6 +190,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
+  will_paginate (~> 3.1.0)
 
 BUNDLED WITH
    1.11.2

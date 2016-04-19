@@ -1,6 +1,13 @@
 class SessionsController < ApplicationController
   def create
-    self.current_user ||= User.from_omniauth(omniauth)
+    if request.env['omniauth.auth'].present?
+      self.current_user ||= User.from_omniauth(omniauth)
+    else
+      self.current_user ||= begin
+        user = User.find_by(name: params[:user][:name])
+        user.authenticate(params[:user][:password])
+      end
+    end
     redirect_to root_path
   end
 
@@ -14,6 +21,6 @@ class SessionsController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :age)
+    params.require(:user).permit(:name, :password)
   end
 end
