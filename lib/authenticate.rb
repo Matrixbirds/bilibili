@@ -18,5 +18,5 @@ module Authenticate
     user == current_user
   end
 
-  alias signed_in? current_user 
+  alias signed_in? current_user
 end

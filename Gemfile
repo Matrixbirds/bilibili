@@ -15,7 +15,7 @@ gem 'pg', '~> 0.18'
 # react fontend framework
 # gem 'react-rails', '~> 1.6.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+# gem 'jbuilder', '~> 2.0'
 gem 'active_model_serializers', git: 'https://github.com/rails-api/active_model_serializers.git'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
