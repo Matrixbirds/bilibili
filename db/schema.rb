@@ -11,40 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419050122) do
+ActiveRecord::Schema.define(version: 20160513034039) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-  enable_extension "uuid-ossp"
-
-  create_table "users", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "nickname"
+    t.string   "email"
     t.string   "password_digest"
     t.integer  "gender"
-    t.text     "sign"
+    t.text     "sign",            limit: 65535
     t.datetime "birthday"
     t.string   "avatar"
     t.string   "uid"
     t.integer  "provider"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "email"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
-  create_table "video_sources", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "video_sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "source_name"
     t.string   "source_url"
     t.string   "source_thumbnail"
     t.integer  "provider"
-    t.uuid     "video_id"
+    t.integer  "video_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
 
   add_index "video_sources", ["video_id"], name: "index_video_sources_on_video_id", using: :btree
 
-  create_table "videos", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
+  create_table "videos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "thumbnail"
     t.datetime "created_at", null: false

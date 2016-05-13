@@ -6,9 +6,9 @@
 #
 # Name              | Type               | Attributes
 # ----------------- | ------------------ | ---------------------------
-# **`id`**          | `uuid`             | `not null, primary key`
-# **`title`**       | `string`           |
-# **`thumbnail`**   | `string`           |
+# **`id`**          | `integer`          | `not null, primary key`
+# **`title`**       | `string(255)`      |
+# **`thumbnail`**   | `string(255)`      |
 # **`created_at`**  | `datetime`         | `not null`
 # **`updated_at`**  | `datetime`         | `not null`
 #

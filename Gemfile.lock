@@ -96,6 +96,7 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    mysql2 (0.4.4)
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
@@ -114,7 +115,6 @@ GEM
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
-    pg (0.18.4)
     rack (2.0.0.alpha)
       json
     rack-test (0.6.3)
@@ -183,9 +183,9 @@ DEPENDENCIES
   faker
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
+  mysql2 (~> 0.4.4)
   omniauth-github (~> 1.1.2)
   omniauth-oauth2 (~> 1.4.0)
-  pg (~> 0.18)
   rails (>= 5.0.0.beta3, < 5.1)
   spring
   spring-watcher-listen (~> 2.0.0)

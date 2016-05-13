@@ -10,8 +10,8 @@ ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.beta3', '< 5.1'
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+# Use mysql as the database for Active Record
+gem 'mysql2', '~> 0.4.4'
 # react fontend framework
 # gem 'react-rails', '~> 1.6.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

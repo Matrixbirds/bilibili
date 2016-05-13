@@ -6,12 +6,12 @@
 #
 # Name                    | Type               | Attributes
 # ----------------------- | ------------------ | ---------------------------
-# **`id`**                | `uuid`             | `not null, primary key`
-# **`source_name`**       | `string`           |
-# **`source_url`**        | `string`           |
-# **`source_thumbnail`**  | `string`           |
+# **`id`**                | `integer`          | `not null, primary key`
+# **`source_name`**       | `string(255)`      |
+# **`source_url`**        | `string(255)`      |
+# **`source_thumbnail`**  | `string(255)`      |
 # **`provider`**          | `integer`          |
-# **`video_id`**          | `uuid`             | `indexed`
+# **`video_id`**          | `integer`          | `indexed`
 # **`created_at`**        | `datetime`         | `not null`
 # **`updated_at`**        | `datetime`         | `not null`
 #

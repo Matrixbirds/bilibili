@@ -6,19 +6,19 @@
 #
 # Name                   | Type               | Attributes
 # ---------------------- | ------------------ | ---------------------------
-# **`id`**               | `uuid`             | `not null, primary key`
-# **`name`**             | `string`           |
-# **`nickname`**         | `string`           |
-# **`password_digest`**  | `string`           |
+# **`id`**               | `integer`          | `not null, primary key`
+# **`name`**             | `string(255)`      |
+# **`nickname`**         | `string(255)`      |
+# **`email`**            | `string(255)`      |
+# **`password_digest`**  | `string(255)`      |
 # **`gender`**           | `integer`          |
-# **`sign`**             | `text`             |
+# **`sign`**             | `text(65535)`      |
 # **`birthday`**         | `datetime`         |
-# **`avatar`**           | `string`           |
-# **`uid`**              | `string`           |
+# **`avatar`**           | `string(255)`      |
+# **`uid`**              | `string(255)`      |
 # **`provider`**         | `integer`          |
 # **`created_at`**       | `datetime`         | `not null`
 # **`updated_at`**       | `datetime`         | `not null`
-# **`email`**            | `string`           |
 #
 
 class User < ApplicationRecord
